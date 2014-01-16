@@ -1,7 +1,8 @@
-# generator-linangular-module [![Build Status](https://secure.travis-ci.org/l-lin/generator-linangular-module.png?branch=master)](https://travis-ci.org/l-lin/generator-linangular-module) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+# generator-linangular-module
 
-A generator for [Yeoman](http://yeoman.io).
+[![Build Status](https://secure.travis-ci.org/l-lin/generator-linangular-module.png?branch=master)](https://travis-ci.org/l-lin/generator-linangular-module) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
+> A generator for building [AngularJS](http://angularjs.org/) modules.
 
 ## Getting Started
 
@@ -23,10 +24,12 @@ $ npm install -g yo
 
 Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
 
-To install generator-linangular-module from npm, run:
+To install `generator-linangular-module`, run:
 
 ```
-$ npm install -g generator-linangular-module
+$ git clone https://github.com/l-lin/generator-linangular-module.git
+$ cd generator-linangular-module
+$ npm link
 ```
 
 Finally, initiate the generator:

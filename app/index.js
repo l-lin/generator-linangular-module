@@ -34,7 +34,7 @@ LinangularModuleGenerator.prototype.askFor = function askFor() {
     	name: '<%= pkg.name %>',
     	author: '<%= pkg.author %>',
     	version: '<%= pkg.version %>'
-    }
+    };
 
 	// have Yeoman greet the user.
 	console.log(this.yeoman);
@@ -45,6 +45,12 @@ LinangularModuleGenerator.prototype.askFor = function askFor() {
         dist: '<%= yeoman.dist %>',
         build: '<%= yeoman.build %>',
         banner: '<%= yeoman.banner %>'
+    };
+
+    this.express = {
+    	options: {
+    		livereload: '<%= express.options.livereload %>'
+    	}
     };
 	
 	var prompts = [{

@@ -77,6 +77,7 @@ LinangularModuleGenerator.prototype.projectfiles = function projectfiles() {
 	this.copy('bowerrc', '.bowerrc');
 	this.copy('gitignore', '.gitignore');
 	this.copy('gitattributes', '.gitattributes');
+	this.copy('travis.yml', '.travis.yml');
 	this.copy('Gruntfile.js', 'Gruntfile.js');
 	this.copy('src/app.js', 'src/' + this.moduleName + '.js');
 	this.copy('src/app.css', 'src/' + this.moduleName + '.css');

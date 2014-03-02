@@ -17,7 +17,8 @@
         "test",
         "node_modules",
         "src",
-        ".travis.yml"
+        ".travis.yml",
+        "vendor"
     ],
     "dependencies": {
         "angular": ">= 1.2.7"

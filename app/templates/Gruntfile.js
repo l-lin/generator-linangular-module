@@ -10,6 +10,7 @@
 module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
+    var path = require('path');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -22,6 +23,54 @@ module.exports = function(grunt) {
                 ' * <%= pkg.name %> - v<%= pkg.version %>\n' +
                 ' * https://github.com/<%= pkg.author %>/<%= pkg.name %>\n' +
                 ' */\n'
+        },
+        /** ------------- WATCH FILES FOR DEBUG PURPOSES ------------- */
+        watch: {
+            livereload: {
+                options: {
+                    livereload: '<%= express.options.livereload %>'
+                },
+                files: [
+                    '<%= yeoman.src %>/**/*.html',
+                    '<%= yeoman.src %>/styles/{,*/}*.css',
+                    '<%= yeoman.src %>/app/{,*/}*.js',
+                    '<%= yeoman.src %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+                ]
+            },
+            test: {
+                options: {
+                    livereload: {
+                        port: 35728
+                    }
+                },
+                files: [
+                    '<%= yeoman.src %>/{,*/}*.html',
+                    '{<%= yeoman.build %>,<%= yeoman.src %>}/app/{,*/}*.js'
+                ],
+                tasks: ['test']
+            }
+        },
+        express: {
+            options: {
+                port: 9000,
+                hostname: '127.0.0.1',
+                livereload: 35729
+            },
+            livereload: {
+                options: {
+                    open: true,
+                    bases: path.resolve(__dirname)
+                }
+            },
+            test: {
+                options: {
+                    port: 9001,
+                    bases: [
+                        'test',
+                        '<%= yeoman.src %>'
+                    ]
+                }
+            }
         },
         /** ------------- CLEAN TMP FOLDERS ------------- */
         clean: {
@@ -145,6 +194,12 @@ module.exports = function(grunt) {
 
     grunt.registerTask('test', [
         'karma'
+    ]);
+
+    grunt.registerTask('serve', [
+        'clean:server',
+        'express:livereload',
+        'watch:livereload'
     ]);
 
     grunt.registerTask('build', [

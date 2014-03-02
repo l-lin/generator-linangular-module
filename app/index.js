@@ -50,7 +50,7 @@ LinangularModuleGenerator.prototype.askFor = function askFor() {
 	var prompts = [{
 		name: 'authorName',
 		message: 'What is your name?',
-		default: 'foobar'
+		default: 'l-lin'
 	}];
 	
 	this.prompt(prompts, function (props) {
@@ -78,4 +78,7 @@ LinangularModuleGenerator.prototype.projectfiles = function projectfiles() {
 	this.copy('test/spec/app.spec.js', 'test/spec/' + this.moduleName + '.spec.js');
 	this.copy('test/karma.conf.js', 'test/karma.conf.js');
 	this.copy('README.md', 'README.md');
+	this.copy('index.html', 'index.html');
+	this.directory('styles', 'styles');
+	this.directory('vendor', 'vendor');
 };

@@ -19,6 +19,7 @@ module.exports = function(grunt) {
             src: 'src',
             dist: 'dist',
             build: '.tmp',
+            currentDir: path.resolve(__dirname),
             banner: '/*!\n' +
                 ' * <%= pkg.name %> - v<%= pkg.version %>\n' +
                 ' * https://github.com/<%= pkg.author %>/<%= pkg.name %>\n' +
@@ -31,6 +32,7 @@ module.exports = function(grunt) {
                     livereload: '<%= express.options.livereload %>'
                 },
                 files: [
+                    '<%= yeoman.currentDir %>/**/*.html',
                     '<%= yeoman.src %>/**/*.html',
                     '<%= yeoman.src %>/styles/{,*/}*.css',
                     '<%= yeoman.src %>/{,*/}*.js',

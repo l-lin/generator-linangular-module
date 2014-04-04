@@ -44,6 +44,7 @@ LinangularModuleGenerator.prototype.askFor = function askFor() {
         src: '<%= yeoman.src %>',
         dist: '<%= yeoman.dist %>',
         build: '<%= yeoman.build %>',
+        currentDir: '<%= yeoman.currentDir %>',
         banner: '<%= yeoman.banner %>'
     };
 
@@ -89,4 +90,5 @@ LinangularModuleGenerator.prototype.projectfiles = function projectfiles() {
 	this.copy('favicon.png', 'favicon.png');
 	this.directory('styles', 'styles');
 	this.directory('vendor', 'vendor');
+	this.directory('grunt', 'grunt');
 };

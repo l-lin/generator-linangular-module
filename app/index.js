@@ -85,7 +85,7 @@ LinangularModuleGenerator.prototype.projectfiles = function projectfiles() {
 	this.copy('src/app.html', 'src/' + this.moduleName + '.html');
 	this.copy('test/spec/app.spec.js', 'test/spec/' + this.moduleName + '.spec.js');
 	this.copy('test/karma.conf.js', 'test/karma.conf.js');
-	this.copy('README.md', 'README.md');
+	this.copy('_README.md', 'README.md');
 	this.copy('index.html', 'index.html');
 	this.copy('favicon.png', 'favicon.png');
 	this.directory('styles', 'styles');

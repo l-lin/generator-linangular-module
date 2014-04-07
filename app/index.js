@@ -45,7 +45,9 @@ LinangularModuleGenerator.prototype.askFor = function askFor() {
         dist: '<%= yeoman.dist %>',
         build: '<%= yeoman.build %>',
         currentDir: '<%= yeoman.currentDir %>',
-        banner: '<%= yeoman.banner %>'
+        banner: '<%= yeoman.banner %>',
+        demo: '<%= yeoman.demo %>',
+        styles: '<%= yeoman.styles %>'
     };
 
     this.express = {

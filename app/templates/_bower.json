@@ -26,7 +26,8 @@
         "README.md",
         "server",
         "styles",
-        "_config.yml"
+        "_config.yml",
+	"grunt"
     ],
     "dependencies": {
         "angular": ">= 1.2.7"
